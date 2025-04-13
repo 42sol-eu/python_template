@@ -32,14 +32,14 @@ Follow the steps below to use the template:
     cd /{project_path}
     ```
 
-2. Run the `copier` command, specifying the path to the template:
+2. Run the `copier` command, use the repository URL:
+    ```bash
+    copier gh:42sol-eu/python_template .
+    ```
+    
+    Alternatively, if you have a local copy run the `copier` command, specifying the path to the template:
     ```bash
     copier /home/$USER/__templates/python_template .
-    ```
-
-    Alternatively, if the template is hosted in a Git repository, you can use the repository URL:
-    ```bash
-    copier gh:username/repository_name .
     ```
 
 3. Follow the interactive prompts to configure your new project. The prompts are defined in the `copier.yml` file of the template.

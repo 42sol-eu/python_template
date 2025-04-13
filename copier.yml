@@ -5,7 +5,6 @@ project_name:
 author:
     type: str
     help: What is the authors name?
-
-module_name:
+main_version:
     type: str
-    help: What is your Python module name?
+    help: What is the main version (start with 0, 1 or the year)?

@@ -55,7 +55,9 @@ TODO: Provide examples or instructions on how to use the project.
 TODO: Outline how others can contribute to the project.
 
 ## License
-Specify the license under which the project is distributed.
+
+TODO: Specify the license under which the project is distributed.
 
 ## Contact
-Include contact information for questions or feedback.
+
+For any questions or feedback, please use the issues section on [GitHub](https://github.com/) or [GitLab](https://gitlab.com/) to contact the development team. We will respond as soon as possible.

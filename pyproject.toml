@@ -1,6 +1,7 @@
 [project]
 name = "python-template" # {{project_name}}
-version = "2025.1.0" # "{{year}}.1.0"
+version = "2025.1.0" 
+# "{{major}}.1.0"
 description = ""
 authors = [
     {name = "haeban",email = "andreas.haeberle@stadlerrail.com"},
