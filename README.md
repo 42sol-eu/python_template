@@ -1,40 +1,55 @@
-# README {{project_name}}
+# README: template 
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact](#contact)
+## Table of Contents 
 
-## Introduction
+- [README: template](#readme-template)
+- [Table of Contents](#table-of-contents)
+- [How to Use the Python Template with Copier](#how-to-use-the-python-template-with-copier)
+    - [Prerequisites](#prerequisites)
+    - [Steps to Use the Template](#steps-to-use-the-template)
+    - [Example `copier.yml`](#example-copieryml)
 
-This template is designed to streamline the creation of Python projects by leveraging the [Copier](https://copier.readthedocs.io/) project. Copier is a powerful tool for generating project scaffolding, allowing you to create consistent and customizable project structures with ease. By using this template, you can quickly set up a new Python project with predefined configurations and best practices, saving time and ensuring a solid foundation for your development work.
+## How to Use the Python Template with Copier
 
-[![Made with Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
+This template can be used with the `copier` tool to scaffold a new Python project. 
+Follow the steps below to use the template:
 
+### Prerequisites
+1. Install `copier` if you haven't already:
+    ```bash
+    python --version     # >=3.11.0,<4.0.0
+    pipx --version       # >=1.1.0
+    pipx install copier  # ending with the success message
+    which copier         # /home/$USER/.local/bin/copier
+    copier --version     # >=9.6.0
+    ```
 
-## Features
+2. Ensure you have access to the template directory or repository.
 
-TODO: List your key features and functionalities of the project.
+### Steps to Use the Template
+1. Navigate to the directory where you want to create your new project:
+    ```bash
+    cd /{project_path}
+    ```
 
-## Installation
+2. Run the `copier` command, use the repository URL:
+    ```bash
+    copier gh:42sol-eu/python_template .
+    ```
+    
+    Alternatively, if you have a local copy run the `copier` command, specifying the path to the template:
+    ```bash
+    copier /home/$USER/__templates/python_template .
+    ```
+
+3. Follow the interactive prompts to configure your new project. The prompts are defined in the `copier.yml` file of the template.
+
+### Example `copier.yml`
 
 > [!Important]
-> It is better to use `python -m pip {command} {parameters}` than `pip`.
-> It is also good praxis to use a virtual environment for your project.
+> The variables used for the project are defined in `copier.yml` in the root folder
+> For more documentation see: [https://copier.readthedocs.io](https://copier.readthedocs.io/en/stable/#installation)
 
-TODO: Explain how to install and set up the project locally.
-
-## Usage
-
-> [!Note] Template
-> If you want to use this template for your project see [])(README_template.md)
-
-
-TODO: Provide examples or instructions on how to use the project.
 
 ## Contributing
 
@@ -50,14 +65,3 @@ TODO: Provide examples or instructions on how to use the project.
 > 7. **Be patient until we answer** or **give us an additional ping** via the provided.
 > 
 > We appreciate your contributions and will review your pull request as soon as possible. Thank you for helping us improve this template!
-
-
-TODO: Outline how others can contribute to the project.
-
-## License
-
-TODO: Specify the license under which the project is distributed.
-
-## Contact
-
-For any questions or feedback, please use the issues section on [GitHub](https://github.com/) or [GitLab](https://gitlab.com/) to contact the development team. We will respond as soon as possible.

@@ -1,10 +1,37 @@
 # questions
 project_name:
     type: str
-    help: What is your project name?
+    help: What is your project name? (must be a valid Python module name)
+    validator: "[a-z][a-z0-9_]*"
 author:
     type: str
+    default: "felix@42sol.eu"
     help: What is the authors name?
+organization:
+    type: str
+    default: "42sol-eu"
+    help: What is the organization name? used for the github repository?"
+year:
+    type: str
+    default: "{{ _copier_conf.year }}"
+    help: What is the year? (default is the current year)
+    validator: "^[0-9]{4}$"
 main_version:
     type: str
+    default: "0"
     help: What is the main version (start with 0, 1 or the year)?
+    validator: "^[0-9]+$"
+tag_line:
+    type: str
+    default: "TODO: add the cool tag line"
+    help: What is the tag line? (a short description of the project)
+    validator: "^[^#]+$"
+
+# investigate about `_templates_suffix: ""`
+_tasks:
+    # OS-specific task (supported values are "linux", "macos", "windows" and `None`)
+    - command: rm {{ project_name }}/README.md
+      when: "{{ _copier_conf.os in  ['linux', 'macos'] }}"
+    - command: Remove-Item {{ project_name }}\\README.md
+      when: "{{ _copier_conf.os == 'windows' }}"
+    - git init 
