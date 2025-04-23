@@ -35,8 +35,8 @@ os:
 # investigate about `_templates_suffix: ""`
 _tasks:
     # OS-specific task (supported values are "linux", "macos", "windows" and `None`)
-    - command: rm "{{ project_name }}/README.md"
-      when: "{{ os in  ['linux', 'macos'] }}"
-    - command: rm "{{ project_name }}\\README.md"
-      when: "{{ os == 'windows' }}"
-    - git init 
+    #- command: rm "{{ project_name }}/README.md"
+    #  when: "{{ os in  ['linux', 'macos'] }}"
+    #- command: rm "{{ project_name }}\\README.md"
+    #  when: "{{ os == 'windows' }}"
+    - command: git init 
