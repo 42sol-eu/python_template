@@ -14,17 +14,14 @@ year:
     type: int
     default: 2025
     help: What year are we in?
-    validator: "^[0-9]{4}$"
 main_version:
     type: str
     default: "0"
     help: What is the main version (start with 0, 1 or the year)?
-    validator: "^[0-9.]+$"
 tag_line:
     type: str
     default: "TODO: add the cool tag line"
     help: What is the tag line? (a short description of the project)
-    validator: "^[^#]+$"
 os:
     type: str
     choices:
