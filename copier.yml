@@ -11,26 +11,35 @@ organization:
     default: "42sol-eu"
     help: What is the organization name? used for the github repository?"
 year:
-    type: str
-    default: "{{ copier_conf.year }}"
-    help: What is the year? (default is the current year)
+    type: int
+    default: 2025
+    help: What year are we in?
     validator: "^[0-9]{4}$"
 main_version:
     type: str
     default: "0"
     help: What is the main version (start with 0, 1 or the year)?
-    validator: "^[0-9]+$"
+    validator: "^[0-9.]+$"
 tag_line:
     type: str
     default: "TODO: add the cool tag line"
     help: What is the tag line? (a short description of the project)
     validator: "^[^#]+$"
+os:
+    type: str
+    choices:
+        - linux
+        - macos
+        - windows
+    default: "windows"
+    help: what is your operating system?
+
 
 # investigate about `_templates_suffix: ""`
 _tasks:
     # OS-specific task (supported values are "linux", "macos", "windows" and `None`)
     - command: rm "{{ project_name }}/README.md"
-      when: "{{ copier_conf.os in  ['linux', 'macos'] }}"
+      when: "{{ os in  ['linux', 'macos'] }}"
     - command: Remove-Item {{ project_name }}\\README.md
-      when: "{{ copier_conf.os == 'windows' }}"
+      when: "{{ os == 'windows' }}"
     - git init 
