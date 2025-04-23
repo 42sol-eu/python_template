@@ -37,6 +37,6 @@ _tasks:
     # OS-specific task (supported values are "linux", "macos", "windows" and `None`)
     - command: rm "{{ project_name }}/README.md"
       when: "{{ os in  ['linux', 'macos'] }}"
-    - command: Remove-Item {{ project_name }}\\README.md
+    - command: rm "{{ project_name }}\\README.md"
       when: "{{ os == 'windows' }}"
     - git init 
